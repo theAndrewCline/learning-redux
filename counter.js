@@ -1,3 +1,4 @@
+const Redux = require('Redux')
 const counter = ( state, action ) => {
 
     switch (action.type) {
@@ -6,5 +7,8 @@ const counter = ( state, action ) => {
         default: return state
     }
 }
+
+const { createStore } = Redux
+const store = createStore(counter)
 
 module.exports = counter
