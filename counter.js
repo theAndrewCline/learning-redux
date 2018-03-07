@@ -1,9 +1,10 @@
-function counter( state, action ) {
-    if (action.type === 'INCERMENT') {
-        return state + 1
-    } else if (action.type === 'DECERMENT') {
-        return state - 1
-    } else return state
+const counter = ( state, action ) => {
+
+    switch (action.type) {
+        case 'INCREMENT': return state + 1
+        case 'DECREMENT': return state - 1
+        default: return state
+    }
 }
 
 module.exports = counter
