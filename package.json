@@ -1,0 +1,23 @@
+{
+	"name": "learning-redux",
+	"version": "1.0.0",
+	"description": "learning redux through egghead.io",
+	"main": "counter.js",
+	"dependencies": {
+		"jest": "^22.4.2"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/theAndrewCline/learning-redux.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/theAndrewCline/learning-redux/issues"
+	},
+	"homepage": "https://github.com/theAndrewCline/learning-redux#readme"
+}
