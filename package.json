@@ -4,6 +4,7 @@
 	"description": "learning redux through egghead.io",
 	"main": "counter.js",
 	"dependencies": {
+		"live-server": "^1.2.0",
 		"redux": "^3.7.2"
 	},
 	"devDependencies": {

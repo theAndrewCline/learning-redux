@@ -1,4 +1,3 @@
-const Redux = require('Redux')
 const counter = (state = 0, action) => {
 	switch (action.type) {
 		case 'INCREMENT':
@@ -13,4 +12,14 @@ const counter = (state = 0, action) => {
 const { createStore } = Redux
 const store = createStore(counter)
 
-module.exports = counter
+const render = () => {
+	document.body.innerText = store.getState()
+}
+
+store.subscribe(render)
+render()
+
+document.addEventListener('click', () => {
+	store.dispatch({ type: 'INCREMENT' })
+})
+// module.exports = counter
