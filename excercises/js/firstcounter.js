@@ -37,4 +37,6 @@ render()
 document.addEventListener('click', () => {
 	store.dispatch({ type: 'INCREMENT' })
 })
-// module.exports = counter
+
+
+module.exports = counter
