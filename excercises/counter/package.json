@@ -2,13 +2,37 @@
   "name": "counter",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "private": true,
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "es2015"
+    ]
+  },
   "directories": {
     "test": "tests"
   },
   "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
     "test": "jest"
   },
   "author": "Andrew Cline",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "redux": "^4.0.0"
+  }
 }

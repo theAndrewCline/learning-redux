@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom' 
+
 function counter(state, action) {
    if (typeof state === 'undefined') {
       return 0
@@ -11,7 +14,11 @@ function counter(state, action) {
    }
 }
 
-const Counter = ({ value, onIncrement, onDecrement }) => (
+const Counter = ({ 
+    value, 
+    onIncrement, 
+    onDecrement 
+}) => (
    <div>
       <h1>{value}</h1>
       <button onclick={onIncrement}>+</button>
