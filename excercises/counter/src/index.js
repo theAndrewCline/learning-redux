@@ -1,5 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom' 
+import ReactDOM from 'react-dom'
+import { createStore, dispatch, subscribe } from 'redux'
 
 function counter(state, action) {
    if (typeof state === 'undefined') {
@@ -14,19 +15,13 @@ function counter(state, action) {
    }
 }
 
-const Counter = ({ 
-    value, 
-    onIncrement, 
-    onDecrement 
-}) => (
+const Counter = ({ value, onIncrement, onDecrement }) => (
    <div>
       <h1>{value}</h1>
-      <button onclick={onIncrement}>+</button>
-      <button onclick={onDecrement}>-</button>
+      <button onClick={onIncrement}>+</button>
+      <button onClick={onDecrement}>-</button>
    </div>
 )
-
-const { createStore } = Redux
 
 const store = createStore(counter)
 
@@ -51,7 +46,3 @@ const render = () => {
 
 store.subscribe(render)
 render()
-
-document.addEventListener('click', () => {
-   store.dispatch({ type: 'INCREMENT' })
-})

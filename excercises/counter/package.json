@@ -14,9 +14,8 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --mode development --hot",
     "build": "webpack --mode production",
-    "dev": "webpack --mode development",
     "test": "jest"
   },
   "author": "Andrew Cline",
