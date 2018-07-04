@@ -1,4 +1,4 @@
-const counter = require('../js/counter')
+import counter from '../src/counter'
 
 test('counter should go up by 1 with INCREMENT', () => {
   expect(counter(0, { type: 'INCREMENT' })).toBe(1)
